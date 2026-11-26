@@ -27,6 +27,18 @@ pnpm build
 
 产物位于 `dist/`，可部署到静态服务器，也可直接打开 `dist/index.html`。直接打开时，浏览器和 API 服务需允许 `file://` 页面的存储与跨域请求。
 
+## 桌面与 Android
+
+同一份前端也提供 Tauri 壳（Windows 10 / Android）。Rust 只负责窗口、权限和文件保存，聊天界面仍运行在 WebView 中。
+
+```sh
+pnpm tauri:dev     # 桌面开发（Windows 主机）
+pnpm tauri:build   # Windows 安装包（NSIS / MSI）
+pnpm android:dev   # Android 真机调试
+```
+
+验证结果、环境要求与已知缺口见 [docs/tauri.md](docs/tauri.md)。
+
 ## 功能
 
 - 多会话、自动标题、重命名与删除；编辑提问、重新生成和切换消息分支。

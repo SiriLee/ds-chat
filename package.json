@@ -7,12 +7,22 @@
   "type": "module",
   "scripts": {
     "dev": "rspack serve -c rspack.config.ts",
-    "build": "rm -rf dist && NODE_ENV=production rspack build -c rspack.config.ts",
+    "build": "node scripts/build.mjs",
     "type": "tsc -p tsconfig.json",
     "lint": "oxlint src rspack.config.ts",
-    "format": "oxfmt --write ."
+    "test:platform": "node --test src/platform/platform.test.ts",
+    "format": "oxfmt --write .",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "android:dev": "tauri android dev",
+    "android:build": "tauri android build"
   },
   "dependencies": {
+    "@tauri-apps/api": "^2.12.5",
+    "@tauri-apps/plugin-dialog": "^2.8.4",
+    "@tauri-apps/plugin-fs": "^2.7.1",
+    "@tauri-apps/plugin-opener": "^2.7.3",
     "@types/katex": "^0.16.5",
     "@types/mdast": "~4.0.3",
     "@types/prismjs": "^1.26.1",
@@ -39,6 +49,7 @@
     "@rspack/core": "2.0.2",
     "@rspack/dev-server": "2.0.1",
     "@swc/helpers": "0.5.23",
+    "@tauri-apps/cli": "^2.12.6",
     "@types/node": "~20.9.2",
     "oxfmt": "0.48.0",
     "oxlint": "1.63.0",

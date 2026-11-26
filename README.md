@@ -27,6 +27,18 @@ pnpm build
 
 The output is written to `dist/`. Deploy it to a static web server or open `dist/index.html` directly. Opening the file directly requires browser support for storage on `file://` pages and an API service that permits their cross-origin requests.
 
+## Desktop and Android
+
+The same frontend also ships as a Tauri app for Windows 10 and Android. Rust only handles the window, permissions, and saving files; the chat UI stays in the webview.
+
+```sh
+pnpm tauri:dev     # desktop development (Windows host)
+pnpm tauri:build   # Windows installers (NSIS / MSI)
+pnpm android:dev   # Android device debugging
+```
+
+See [docs/tauri.md](docs/tauri.md) for verified results, prerequisites, and known gaps.
+
 ## Features
 
 - Multiple conversations with automatic titles, renaming, and deletion; edit prompts, regenerate replies, and switch between message branches.
