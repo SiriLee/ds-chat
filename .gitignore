@@ -9,3 +9,14 @@ build/
 .env.*
 !.env.example
 tmp/
+
+# Tauri / Rust
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# 本地构建工具链与临时文件（不入库）
+.tmp/
+.android-sdk/
+.android-user/
+.cargo-home/
+.gradle-home/
