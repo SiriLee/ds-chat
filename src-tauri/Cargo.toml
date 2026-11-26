@@ -1,6 +1,6 @@
 [package]
 name = "ds-chat"
-version = "0.1.4"
+version = "0.0.0"
 description = "DeepSeek chat client for Windows and Android"
 authors = ["SiriLee"]
 edition = "2021"
