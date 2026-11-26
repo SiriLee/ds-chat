@@ -1,7 +1,7 @@
 [package]
 name = "ds-chat"
 version = "0.1.4"
-description = "DeepSeek chat demo for Windows and Android"
+description = "DeepSeek chat client for Windows and Android"
 authors = ["SiriLee"]
 edition = "2021"
 rust-version = "1.77.2"
