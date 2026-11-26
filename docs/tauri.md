@@ -73,7 +73,7 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export GRADLE_USER_HOME="$PWD/.gradle-home"
 export ANDROID_USER_HOME="$PWD/.android-user"
 
-pnpm tauri:android:dev
+pnpm android:dev
 pnpm tauri android build --debug -t aarch64
 ```
 
