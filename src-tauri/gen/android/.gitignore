@@ -18,3 +18,5 @@ keystore.properties
 
 /.tauri
 /tauri.settings.gradle
+# Kotlin/Gradle 本地会话文件
+.kotlin/
